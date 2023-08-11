@@ -1,0 +1,54 @@
+.logo {
+  height: 40px;
+  margin: 20px;
+}
+
+.button-mic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #d9d8d8dc;
+  color: #111111;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+}
+
+.header-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(11, 11, 11);
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(11, 11, 11);
+}
+
+.board-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+} 
+
