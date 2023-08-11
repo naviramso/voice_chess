@@ -8,6 +8,7 @@ export default function Board() {
   function makeAMove(move) {
     const gameCopy = { ...game };
     const result = gameCopy.move(move);
+    console.log(result)
     setGame(gameCopy);
     return result; // null if the move was illegal, the move object if the move was legal
   }
@@ -26,8 +27,6 @@ export default function Board() {
       to: targetSquare,
       promotion: "q", // always promote to a queen for example simplicity
     });
-
-    // illegal move
     if (move === null) return false;
     setTimeout(makeRandomMove, 200);
     return true;

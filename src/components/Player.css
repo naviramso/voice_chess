@@ -1,0 +1,27 @@
+.container {
+    display: block;
+    
+    height: 50px;
+    width: 75%;
+    align-items: left;
+}
+
+.container2{
+    display: block;
+}
+
+.img{
+
+    margin-left: 10px;
+    margin-right: 5px;
+    float: left;
+}
+
+.name{
+    width: 100%;
+}
+
+.piezas{
+
+    width: 14px;
+}
