@@ -120,7 +120,6 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer">
-        <p>{transcript}</p>
         <button
           type="button"
           className="button-mic"
