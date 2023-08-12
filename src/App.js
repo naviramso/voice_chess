@@ -15,11 +15,10 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
-        <Player nombre="José" color="b" turnInfo={turnInfo} />
-        <Clock />
+        <Player nombre="José" color="b" turnInfo={turnInfo}  />
         <Board setTurnInfo={setTurnInfo}/>
-        <Player nombre="Juan" color="w" turnInfo={turnInfo}/>
-        <Clock />
+        <Player nombre="Juan" color="w" turnInfo={turnInfo} />
+
       </div>
       <Footer />
     </div>

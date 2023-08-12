@@ -15,10 +15,13 @@ export default function Board(props) {
 
   function makeRandomMove() {
     const possibleMoves = game.moves();
+    const randomDelay = Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000
     if (game.game_over() || game.in_draw() || possibleMoves.length === 0)
       return; // exit if the game is over
     const randomIndex = Math.floor(Math.random() * possibleMoves.length);
-    makeAMove(possibleMoves[randomIndex]);
+    setTimeout(() => {
+      makeAMove(possibleMoves[randomIndex]);
+    }, randomDelay);
   }
 
   function onDrop(sourceSquare, targetSquare) {

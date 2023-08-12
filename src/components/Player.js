@@ -10,6 +10,7 @@ import wN from './public/piezas/wN.png'
 import wP from './public/piezas/wP.png'
 import wQ from './public/piezas/wQ.png'
 import wR from './public/piezas/wR.png'
+import Clock from "./Clock";
 
 import { useEffect, useState } from 'react';
 
@@ -72,6 +73,7 @@ const Player = ({ nombre, color, turnInfo }) => {
                     </div>
                 </div>
             </div>
+            <Clock turnInfo={turnInfo} black={color === "b" ? true : false} />
 
         </>
     );
