@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Chess from "chess.js";
 import { Chessboard } from "react-chessboard";
 
-export default function Board() {
+export default function Board({ voiceMove }) {
   const [game, setGame] = useState(new Chess());
+
+  useEffect(() => {
+    console.log(voiceMove);
+    makeAMove(voiceMove);
+  }, [voiceMove]);
 
   function makeAMove(move) {
     const gameCopy = { ...game };

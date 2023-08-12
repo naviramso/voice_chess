@@ -3,7 +3,7 @@ import { BsMic } from "react-icons/bs";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import "./styles.css";
 
-const Footer = () => {
+const Footer = ({setMove}) => {
   const { resetTranscript,transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
   const [mov2,setMov2]=useState({letra:"",Num:""});
   const [mov1,setMov1]=useState({letra:"",Num:""});
@@ -14,30 +14,31 @@ const Footer = () => {
   const [texto,setTexto]=useState("");
   
   const asignacionLetra=(comd)=>{
-    if(transcript.includes("a")){
+    let transcript1 = transcript.toLowerCase();
+    if(transcript1.includes("a")){
       comd.letra="a"
     }
-    if(transcript.includes("b") || transcript.includes("v")){
+    if(transcript1.includes("b") || transcript.includes("v")){
       comd.letra="b"
     }
-    if(transcript.includes("c")){
+    if(transcript1.includes("c")){
       comd.letra="c"
     }
-    if(transcript.includes(" de ")){
+    if(transcript1.includes(" de ")){
       comd.letra="d"
     }
     else{
-      if(transcript.includes("e")){
+      if(transcript1.includes("e")){
         comd.letra="e"
       }
     }
-    if(transcript.includes("f")){
+    if(transcript1.includes("f")){
       comd.letra="f"
     }
-    if(transcript.includes("g")){
+    if(transcript1.includes("g")){
       comd.letra="g"
     }
-    if(transcript.includes("h")){
+    if(transcript1.includes("h")){
       comd.letra="h"
     }
   }
@@ -90,6 +91,7 @@ const Footer = () => {
         setComando2(false)
         let c1=mov1.letra+mov1.Num;
         let c2=mov2.letra+mov2.Num;
+        setMove({from:c1, to:c2, promotion:"q"});
         mov1.Num=""
         mov2.Num=""
         console.log(c1+c2)
