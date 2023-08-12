@@ -28,7 +28,7 @@ const Clock = (props) => {
     };
   }, [isPaused, time]);
   useEffect(() => {
-    setIsPaused((prevPaused) => !prevPaused);
+    props.turnInfo !== null && setIsPaused(prevPaused => !prevPaused);
   }, [props.turnInfo]);
 
   return (
