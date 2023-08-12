@@ -44,28 +44,29 @@ const Footer = ({setMove}) => {
   }
 
   const asignacionNum=(comd)=>{
-    if(transcript.includes("1")){
+    let transcript1 = transcript.toLowerCase();
+    if(transcript1.includes("1")|| transcript1.includes("uno")){
       comd.Num="1"
     }
-    if(transcript.includes("2")){
+    if(transcript1.includes("2") || transcript1.includes("dos")){
       comd.Num="2"
     }
-    if(transcript.includes("3")){
+    if(transcript1.includes("3") || transcript1.includes("tres")){
       comd.Num="3"
     }
-    if(transcript.includes("4")){
+    if(transcript1.includes("4") || transcript1.includes("cuatro")){
       comd.Num="4"
     }
-    if(transcript.includes("5")){
+    if(transcript1.includes("5") || transcript1.includes("cinco")){
       comd.Num="5"
     }
-    if(transcript.includes("6")){
+    if(transcript1.includes("6") || transcript1.includes("seis")){
       comd.Num="6"
     }
-    if(transcript.includes("7")){
+    if(transcript1.includes("7") || transcript1.includes("siete")){
       comd.Num="7"
     }
-    if(transcript.includes("8")){
+    if(transcript1.includes("8") || transcript1.includes("ocho")){
       comd.Num="8"
     }
   }
@@ -73,6 +74,7 @@ const Footer = ({setMove}) => {
 
   useEffect(()=>{
     if(comando){
+      if(mov1.letra=="")
       asignacionLetra(mov1)
       asignacionNum(mov1)
       if(mov1.Num!="")
@@ -84,6 +86,7 @@ const Footer = ({setMove}) => {
     }
 
     if(comando2){
+      if(mov2.letra=="")
         asignacionLetra(mov2)
         asignacionNum(mov2)
       if(mov2.Num!=""){
@@ -94,6 +97,8 @@ const Footer = ({setMove}) => {
         setMove({from:c1, to:c2, promotion:"q"});
         mov1.Num=""
         mov2.Num=""
+        mov1.letra=""
+        mov2.letra=""
         console.log(c1+c2)
       }
     }
