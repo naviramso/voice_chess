@@ -10,16 +10,17 @@ import { useState } from "react";
 function App() {
 
   const [turnInfo, setTurnInfo] = useState(null);
+  const [move, setMove] = useState({from:"", to:"", promotion:"q"});
 
   return (
     <div className="App">
       <Header />
       <div className="container">
         <Player nombre="José" color="b" turnInfo={turnInfo}  />
-        <Board setTurnInfo={setTurnInfo}/>
+        <Board voiceMove={move} setTurnInfo={setTurnInfo}/>
         <Player nombre="Juan" color="w" turnInfo={turnInfo} />
       </div>
-      <Footer />
+      <Footer setMove={setMove}/>
     </div>
   );
 }
