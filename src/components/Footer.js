@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer">
         <button
           type="button"
-          className="button-mic"
+          className={mic ? "button-mic active" : "button-mic"}
           onClick={() => {
             setMic(!mic);
           }}

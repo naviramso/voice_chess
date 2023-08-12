@@ -1,26 +1,40 @@
-.container {
-    display: block;
-    
-    height: 50px;
-    width: 75%;
-    align-items: left;
+.player-container {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
-
-.container2{
-    display: block;
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: left;
+    height: 100%;
+    
 }
 
 .img{
-
-    margin-left: 10px;
-    margin-right: 5px;
-    float: left;
+   
 }
 
 .name{
     width: 100%;
+    height: 40%;
 }
 
 .piezas{
-    width: 14px;
+    width: 30px;
+    height: 30%;
+}
+
+.name-pieces-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 20px;
+    height: 100%;
 }

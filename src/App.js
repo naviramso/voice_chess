@@ -18,7 +18,6 @@ function App() {
         <Player nombre="José" color="b" turnInfo={turnInfo}  />
         <Board setTurnInfo={setTurnInfo}/>
         <Player nombre="Juan" color="w" turnInfo={turnInfo} />
-
       </div>
       <Footer />
     </div>
