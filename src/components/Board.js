@@ -2,13 +2,13 @@ import { useState } from "react";
 import Chess from "chess.js";
 import { Chessboard } from "react-chessboard";
 
-export default function Board() {
+export default function Board(props) {
   const [game, setGame] = useState(new Chess());
 
   function makeAMove(move) {
     const gameCopy = { ...game };
     const result = gameCopy.move(move);
-    console.log(result)
+    props.setTurnInfo(result);
     setGame(gameCopy);
     return result; // null if the move was illegal, the move object if the move was legal
   }
